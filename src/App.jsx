@@ -6,6 +6,10 @@ import Home from './Components/home';
 import About from './Components/about';
 import ContactUS from './Components/contact-us'
 import Markets from './Components/markets'
+import Meet from './Components/meet-team'
+import Products from './Components/our-product'
+import GiveUs from './Components/give-us'
+import Gallery from './Components/gallery'
 
 const App = () => {
   return (
@@ -17,6 +21,10 @@ const App = () => {
           <Route path="/layout" element={<Layout />} />
           <Route path="/contact-us" element={<ContactUS />} />
           <Route path="/markets" element={<Markets />} />
+          <Route path="/team" element={<Meet />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/giveus" element={<GiveUs />} />
+          <Route path="/gallery" element={<Gallery />} />
           {/* add more routes as needed */}
         </Routes>
       </Layout>

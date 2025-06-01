@@ -44,10 +44,10 @@ const Footer = () => {
       <div style={{ flex: "1 1 200px" }}>
         <h4>Helpful Links</h4>
         <ul style={{ listStyle: "none", padding: 0, lineHeight: "1.8" }}>
-          <li><a href="#about" style={{ color: "black", textDecoration: "none" }}>About</a></li>
-          <li><a href="#products" style={{ color: "black", textDecoration: "none" }}>Products</a></li>
-          <li><a href="#markets" style={{ color: "black", textDecoration: "none" }}>Markets</a></li>
-          <li><a href="#contactus" style={{ color: "black", textDecoration: "none" }}>Contact Us</a></li>
+          <li><a href="about" style={{ color: "black", textDecoration: "none" }}>About</a></li>
+          <li><a href="products" style={{ color: "black", textDecoration: "none" }}>Products</a></li>
+          <li><a href="markets" style={{ color: "black", textDecoration: "none" }}>Markets</a></li>
+          <li><a href="contactus" style={{ color: "black", textDecoration: "none" }}>Contact Us</a></li>
         </ul>
       </div>
     </footer>

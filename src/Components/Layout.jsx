@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import viewbearLogo from "../assets/asa.png";
 import ContactUs from './contact-us';
 import Footer from './footer';
+import GiveUs from './give-us'
+import Gallery from './gallery'
 
 
 const Layout = ({ children }) => {
@@ -78,16 +80,20 @@ const Layout = ({ children }) => {
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: 50 }}>
           <NavLink href="/about" label="ABOUT" />
-          <NavLink href="/#products" label="PRODUCTS" />
+          <NavLink href="/products" label="PRODUCTS" />
           <NavLink href="/markets" label="MARKETS" />
-          <NavLink href="/#gallery" label="GALLERY" />
-          <NavLink href="/#ourteam" label="OUR TEAM" />
-          <NavLink href="/#contactus" label="CONTACT US" />
+          <NavLink href="/gallery" label="GALLERY" />
+          <NavLink href="/team" label="OUR TEAM" />
+          <NavLink href="/contactus" label="CONTACT US" />
         </div>
       </nav>
 
+      
+
       {/* Render routed page content */}
       <div>{children}</div>
+
+      <GiveUs/>
 
         {/* Contact Us Section */}
       <ContactUs />

@@ -8,6 +8,8 @@ const About = () => {
     setFadeIn(true);
   }, []);
 
+
+  
   return (
     <div
       style={{
@@ -34,7 +36,7 @@ const About = () => {
           marginBottom: 40,
         }}
       >
-        About ViewBear
+        About View Bear
       </h2>
 
       <p
@@ -45,7 +47,7 @@ const About = () => {
           marginBottom: '60px',
         }}
       >
-        ViewBear is committed to helping you connect with your future audience
+        View Bear is committed to helping you connect with your future audience
         through strategic billboard placements. Our team delivers creative
         solutions that drive real results.
       </p>
@@ -59,14 +61,14 @@ const About = () => {
         }}
       >
         <a
-          href="#team"
+          href="/team"
           style={{
             backgroundColor: '#1e40af',
             color: '#fff',
-            padding: '18px 50px',
+            padding: '15px 20px',
             borderRadius: '30px',
             fontWeight: 'bold',
-            fontSize: '1.5rem',
+            fontSize: '1rem',
             textDecoration: 'none',
             boxShadow: '0 4px 12px rgba(30, 64, 175, 0.3)',
             transition: 'background 0.3s',
@@ -80,10 +82,10 @@ const About = () => {
           style={{
             backgroundColor: '#FFA500',
             color: '#fff',
-            padding: '18px 50px',
+            padding: '15px 20px',
             borderRadius: '30px',
             fontWeight: 'bold',
-            fontSize: '1.5rem',
+            fontSize: '1rem',
             textDecoration: 'none',
             boxShadow: '0 4px 12px rgba(34, 197, 94, 0.3)',
             transition: 'background 0.3s',
@@ -92,7 +94,42 @@ const About = () => {
           Our Location
         </a>
       </div>
+      <br />
+      <br />
+      
+      <section
+  id="features"
+  style={{ padding: '60px 20px', textAlign: 'center', backgroundColor: '#f9f9f9' }}
+>
+  <h3 style={{ fontSize: '2rem', marginBottom: 40, color: '#1e3a8a' }}>
+    Why Choose ViewBear?
+  </h3>
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      gap: '40px',
+      flexWrap: 'wrap',
+    }}
+  >
+    <div style={{ maxWidth: 250 }}>
+      <h4 style={{ color: '#111', fontSize: '1.2rem', marginBottom: 10 }}>Easy Booking</h4>
+      <p style={{ color: '#555' }}>Book your billboard spots quickly and hassle-free.</p>
     </div>
+    <div style={{ maxWidth: 250 }}>
+      <h4 style={{ color: '#111', fontSize: '1.2rem', marginBottom: 10 }}>Real-Time Analytics</h4>
+      <p style={{ color: '#555' }}>Track the performance of your ads with clear reports.</p>
+    </div>
+    <div style={{ maxWidth: 250 }}>
+      <h4 style={{ color: '#111', fontSize: '1.2rem', marginBottom: 10 }}>Flexible Management</h4>
+      <p style={{ color: '#555' }}>Manage multiple campaigns in one place.</p>
+    </div>
+  </div>
+</section>
+
+    </div>
+
+    
   );
 };
 
