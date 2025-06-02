@@ -10,6 +10,7 @@ import Meet from './Components/meet-team'
 import Products from './Components/our-product'
 import GiveUs from './Components/give-us'
 import Gallery from './Components/gallery'
+import BillboardDetail from './Components/billboard-details';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/giveus" element={<GiveUs />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/location-detail" element={<BillboardDetail />} />
           {/* add more routes as needed */}
         </Routes>
       </Layout>
