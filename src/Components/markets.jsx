@@ -4,10 +4,10 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import mobil from '../assets/mobil.png';
 import { useNavigate } from 'react-router-dom';
-import billboardtempo from '../assets/Vimage.png';
-import billboardGlass from '../assets/billboard-glass.jpg';
-import billboardOutdoor from '../assets/billboard-outdoor.jpg';
 import billboardHill from '../assets/billboard-hill.jpg';
+import billboard1 from '../assets/b1-b2b.jpg';
+import map1 from '../assets/map1.jpg';
+import map2 from '../assets/map2.jpg';
 
 const BillboardMarkets = () => {
 
@@ -70,64 +70,30 @@ const BillboardMarkets = () => {
   const [positions, setPositions] = useState([, 
     {
       id: 1,
-      name: 'B1',
-      description: 'description',
-      lat: 32.566336, 
-      lang: -86.676552,
-      address: 'H88F+G9P Joffre, Alabama, USA',
-      size: '10x40',
-      type: 'outdoor',
-      imageL: billboardtempo,
-      imageR: billboardOutdoor
+      name: 'E/S SR-13 N @ 6906 SR-13-VB02',
+      price: '$800 per 4 weeks',
+      lat: 34.40298, 
+      lang: -87.75399,
+      address: 'Spruce Pine, AL',
+      size: '6x16 feet',
+      type: 'Static - Rotating - Double Sided',
+      imageL: billboard1,
+      imageR: billboard1,
+      image2: map1
     },
     {
       id: 2,
-      name: 'B2',
-      description: 'description',
-      lat: 32.143310, 
-      lang: -86.626482,
-      address: '49VF+8CC Gordonville, Alabama, USA',
-      size: '10x30',
-      type: 'outdoor',
+      name: 'E/S US-43 @ Highway 22 - VB01',
+      price: '$800 per 4 weeks',
+      lat: 34.39993, 
+      lang: -87.75181,
+      address: 'Spruce Pine, AL',
+      size: '6x16 feet',
+      type:  'Static - Rotating - Single Sided',
       imageL: billboardHill,
-      imageR: billboardHill
-    }, 
-    {
-      id: 3,
-      name: 'B3',
-      description: 'description',
-      lat: 32.532267, 
-      lang: -86.332121,
-      address: 'GMJ9+W52 Coosada, Alabama, USA',
-      size: '10x20',
-      type: 'outdoor',
-      imageL: billboardGlass,
-      imageR: billboardGlass,
-    },
-     {
-      id: 4,
-      name: 'B4',
-      description: 'description',
-      lat: 32.278852, 
-      lang: -85.988347,
-      address: '72H6+GMR Pike Rd, Alabama, USA',
-      size: '10x50',
-      type: 'outdoor',
-      imageL: billboardHill,
-      imageR: billboardOutdoor
-    },
-     {
-      id: 5,
-      name: 'B5',
-      description: 'description',
-      lat: 32.622951, 
-      lang:-86.227313,
-      address: 'JQFF+53M Holtville, Alabama, USA',
-      size: '10x30',
-      type: 'outdoor',
-      imageL: billboardHill,
-      imageR: billboardOutdoor
-    },
+      imageR: billboardHill,
+      image2: map2
+    } 
   ]);
 
 
@@ -147,15 +113,16 @@ const BillboardMarkets = () => {
               bbDetails ={
                 id: boards.id,
                 name: boards.name,
-                description: boards.description,
+                price: boards.price,
                 lat: boards.lat,
                 lng: boards.lang,
                 type: boards.type,
                 address: boards.address,
                 size: boards.size,
-                read: 'LHR',
+                read: 'Lefthand Read',
                 facing: 'North',
-                image: boards.imageL
+                image1: boards.imageL,
+                image2: boards.image2
               };
             }
           });
@@ -166,15 +133,16 @@ const BillboardMarkets = () => {
               bbDetails ={
                 id: boards.id,
                 name: boards.name,
-                description: boards.description,
+                price: boards.price,
                 lat: boards.lat,
                 lng: boards.lang,
                 type: boards.type,
                 address: boards.address,
                 size: boards.size,
-                read: 'RHR',
+                read: 'Righthand Read',
                 facing: 'South',
-                image: boards.imageR
+                image1: boards.imageR,
+                image2: boards.image2
               };
             }
 
@@ -191,7 +159,7 @@ const BillboardMarkets = () => {
     <section style={{ padding: '60px 40px', backgroundColor: '#f9f9f9' }}>
       <div style={{ height: '500px', width: '100%', margin: '40px 0' }}>
           
-        <MapContainer center={[ 32.361861, -86.229658 ]} zoom={9} style={{ height: '500px', width: '100%' }}>
+        <MapContainer center={[ 34.401559, -87.753391 ]} zoom={15} style={{ height: '500px', width: '100%' }}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
 
